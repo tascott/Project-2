@@ -6,7 +6,8 @@
       "website_description": "An e-commerce website that sells products for home and garden.",
       "project_start_date": "2022-01-01",
       "current_project_length": "10 months",
-      "estimated_costs": "$50,000"
+      "completed": false,
+      "estimated_costs": 0
     },
     {
       "client_name": "XYZ Corporation",
@@ -15,7 +16,8 @@
       "website_description": "A corporate website that showcases the company's services and products.",
       "project_start_date": "2022-02-15",
       "current_project_length": "9 months",
-      "estimated_costs": "£40,000"
+      "completed": false,
+      "estimated_costs": 0
     },
     {
       "client_name": "123 Industries",
@@ -24,7 +26,8 @@
       "website_description": "A customer portal that allows customers to manage their accounts and access support.",
       "project_start_date": "2022-03-01",
       "current_project_length": "8 months",
-      "estimated_costs": "$60,000"
+      "completed": false,
+      "estimated_costs": 0
     },
     {
       "client_name": "Acme Corporation",
@@ -33,7 +36,8 @@
       "website_description": "An internal website that serves as a central hub for company information and resources.",
       "project_start_date": "2022-04-01",
       "current_project_length": "7 months",
-      "estimated_costs": "$35,000"
+      "completed": false,
+      "estimated_costs": 0
     },
     {
       "client_name": "The Daily News",
@@ -42,7 +46,8 @@
       "website_description": "A news website that covers local and national news.",
       "project_start_date": "2022-05-01",
       "current_project_length": "6 months",
-      "estimated_costs": "$45,000 CAD"
+      "completed": false,
+      "estimated_costs": 0
     },
     {
       "client_name": "Green Thumb Nursery",
@@ -51,7 +56,8 @@
       "website_description": "A blog that provides gardening tips and advice.",
       "project_start_date": "2022-06-01",
       "current_project_length": "5 months",
-      "estimated_costs": "$20,000"
+      "completed": false,
+      "estimated_costs": 0
     },
     {
       "client_name": "Fitness First",
@@ -60,7 +66,8 @@
       "website_description": "An online booking system that allows members to reserve classes and book personal training sessions.",
       "project_start_date": "2022-07-01",
       "current_project_length": "4 months",
-      "estimated_costs": "$30,000 AUD"
+      "completed": false,
+      "estimated_costs": 0
     },
     {
       "client_name": "XYZ Corporation",
@@ -69,6 +76,7 @@
       "website_description": "A mobile app that allows customers to access the company's services and products.",
       "project_start_date": "2022-08-01",
       "current_project_length": "3 months",
-      "estimated_costs": "€50,000"
+      "completed": false,
+      "estimated_costs": 0
     }
 ]
