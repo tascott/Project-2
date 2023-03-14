@@ -1,0 +1,18 @@
+---
+title: Flow of Question
+---
+flowchart
+    A{Question} --> B[Client-Task]
+    A --> C[Contractor]
+    A --> L[Leave]
+    A --> S[Share]
+    B --> F[Follow up]
+    B --> E[Scoping Document]
+    L --> E
+    C --> E
+    C --> T[ToDo]
+    M --> T
+    S --> M[Meeting]
+    S --> T
+    T --> E
+    S --> E
