@@ -1,0 +1,37 @@
+---
+title: Scoping Document
+---
+classDiagram
+  List <|-- ClientTask
+  List <|-- Contractor
+  List <|-- Share
+  List <|-- Leave
+  List: Client Tasks
+  List: Contractor Tasks
+  List: Shared Tasks
+  List: Out of Scope
+  Leave: + String Description
+  class ClientTask{
++String Description
++DueDate()
++Links()
++Dependencies()
++bool CP
+  }
+  class Contractor{
+  +String Description
+  +DueDate()
++Links()
++Dependencies()
++bool CP
+  }
+  class Share{
+  +String Description
+  +DueDate()
++Links()
++Dependencies()
++bool CP
++String NextStep
++NextStepDate()
+  }
+  
