@@ -2,7 +2,7 @@ import "./style.css";
 
 function Project() {
   return (
-    <div className="Project">
+    <div className="project">
       <h1>Project</h1>
     </div>
   );

@@ -1,15 +1,15 @@
 import './App.css'
-//import react-router-dom
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-//import components
-import Home from './Pages/Home'
+import Home from './pages/Home'
 import Team from './components/Team'
+import ProjectList from './components/ProjectList'
 
-export function App() {
+function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/team" element={<Team />} />
+      <Route path="/projects" element={<ProjectList />} />
     </Routes>
   );
 }

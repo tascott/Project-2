@@ -2,7 +2,7 @@ import "./style.css";
 
 function InvoiceGenerator() {
   return (
-    <div className="InvoiceGenerator">
+    <div className="invoiceGenerator">
       <h1>InvoiceGenerator</h1>
     </div>
   );
