@@ -1,0 +1,32 @@
+---
+title: ToDo - Class Design
+---
+classDiagram
+  ToDo <|-- Task
+  ToDo <|-- Team
+  Client <|-- ToDo
+
+  Client: +ToDo Array
+  Client: +Project Array
+ 
+  ToDo: +State()
+  ToDo: +Date()
+  ToDo: +Estimate()
+  ToDo: +String Description
+  ToDo: +Project
+  ToDo: +Client
+
+  class Task {
+    +Description
+    +Inputs
+    +Outputs
+    +Languages
+    +Task Size
+    +Familiarity
+    }
+  class Team{
+  +TeamMember
+  +Location
+  +Tel
+  +email
+  }
