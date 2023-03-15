@@ -1,14 +1,20 @@
 import "./style.css";
-import Project from "../Project";
+import ProjectCard from "../ProjectCard";
 import projects from "../../data/projects.json";
+import { Link } from "react-router-dom";
 
 function ProjectList() {
   return (
-    <div className="projectList">
+    <div className="projectListContainer">
       <h1>ProjectList</h1>
+      <div className="projectList">
       {projects.map((project) => (
-          <Project key={project.id} {...project} />
-        ))}
+        <div className="projectCardContainer" key={project.id}>
+          <ProjectCard key={project.id} {...project} />
+          <Link to={`/projects/${project.id}`}>View Project</Link>
+        </div>
+      ))}
+      </div>
     </div>
   );
 }

@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Team from './components/Team'
 import ProjectList from './components/ProjectList'
+import ProjectPage from './pages/Project'
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route index element={<Home />} />
       <Route path="/team" element={<Team />} />
       <Route path="/projects" element={<ProjectList />} />
+      <Route path="/projects/:id" element={<ProjectPage />} />
     </Routes>
   );
 }
