@@ -1,6 +1,7 @@
 import "./style.css";
 import projects from "../../data/projects.json";
 import { useParams, Link } from "react-router-dom";
+import CommentBox from "../../components/CommentBox";
 
 function ProjectPage() {
   const { id } = useParams();
@@ -18,6 +19,7 @@ function ProjectPage() {
       <p>Project start: {selectedProject.project_start_date}</p>
       <p>Current Project Length: {selectedProject.current_project_length}</p>
       <p>Estimated Cost: {selectedProject.estimated_costs}</p>
+      <CommentBox />
       <Link to={`/projects`}>Back to Project List</Link>
 
     </div>
