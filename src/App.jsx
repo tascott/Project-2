@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Team from './components/Team'
 import ProjectList from './components/ProjectList'
 import ProjectPage from './pages/Project'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 export default function WrappedApp() {
   return (
     <Router>
+      <Navbar />
       <App />
     </Router>
   );
