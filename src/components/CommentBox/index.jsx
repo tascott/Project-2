@@ -52,16 +52,16 @@ function CommentBox() {
   return (
     <div>
       <title>Comments Box</title>
-      <div className="pt-36 flex justify-center">
-        <div className="min-w-[600px]">
-          <h1 className="text-4xl font-bold ">Comments</h1>
-          <form onSubmit={onSubmit} className="mt-8 flex gap-8">
+      <div>
+        <div>
+          <h1>Comments</h1>
+          <form onSubmit={onSubmit}>
           <input
               onChange={onChange}
               type="text"
               name="username"
               placeholder="Username"
-              className="p-2 border-b focus:border-b-gray-700 w-full outline-none"
+              className="comment-input"
               value={userName}
             />
             <input
