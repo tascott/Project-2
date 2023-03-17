@@ -1,6 +1,8 @@
 import "./style.css";
 import projects from "../../data/projects.json";
 import { useParams, Link } from "react-router-dom";
+import InvoiceGenerator from "../../components/InvoiceGenerator";
+
 
 function ProjectPage() {
   const { id } = useParams();
@@ -8,6 +10,14 @@ function ProjectPage() {
   var selectedProject = projects.find( function( project ){
     return project.id === Number(id);
   });
+
+  const data = {
+    invoiceNumber: 123,
+    invoiceDate: '01/01/2021',
+    dueDate: '01/01/2021',
+    clientName: selectedProject.client_name,
+    clientAddress: selectedProject.client_location
+  };
 
   return (
     <div className="project">
@@ -20,6 +30,9 @@ function ProjectPage() {
       <p>Estimated Cost: {selectedProject.estimated_costs}</p>
       <Link to={`/projects`}>Back to Project List</Link>
 
+      <div className="invoice">
+        <InvoiceGenerator data={data} />
+        </div>
     </div>
   );
 }
