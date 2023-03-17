@@ -1,16 +1,31 @@
 import "./style.css";
 import projects from "../../data/projects.json";
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 import CommentBox from "../../components/CommentBox";
 import InvoiceGenerator from "../../components/InvoiceGenerator";
 
 function ProjectPage() {
   const { id } = useParams();
 
-  var selectedProject = projects.find( function( project ){
+  var selectedProject = projects.find(function (project) {
     return project.id === Number(id);
   });
 
+  const [isVerified, setIsVerified] = useState(false);
+
+  const checkPw = () => {
+    // gets the current input value
+    const answer = document.getElementById("password").value;
+
+    if (answer === "yourSecretPassword") {
+      setIsVerified(true);
+    } else {
+      alert("Sorry, that's not it");
+    }
+  };
+
+ const YourApp = () => (
   const data = {
     invoiceNumber: 123,
     invoiceDate: '01/01/2021',
@@ -34,6 +49,19 @@ function ProjectPage() {
       <div className="invoice">
         <InvoiceGenerator data={data} />
         </div>
+    </div>
+  );
+
+  return (
+    <div>
+      {isVerified ? (
+        <YourApp />
+      ) : (
+        <form onSubmit={checkPw}>
+          <input id="password" name="password" />
+          <button>open sesame</button>
+        </form>
+      )}
     </div>
   );
 }
