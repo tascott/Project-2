@@ -1,10 +1,10 @@
-import './App.css'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Team from './components/Team'
-import ProjectList from './components/ProjectList'
-import ProjectPage from './pages/Project'
-import Navbar from './components/Navbar/Navbar'
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Team from './components/Team';
+import ProjectList from './components/ProjectList';
+import ProjectPage from './pages/Project';
+import Navbar from './components/Navbar';
 
 function App() {
   return (

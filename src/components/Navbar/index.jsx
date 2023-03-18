@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
@@ -26,7 +27,7 @@ function Navbar({ currentPage, handlePageChange }) {
           Projects
         </a>
       </li>
-      
+
       <li className="nav-item">
         <a
           href="#contact"
