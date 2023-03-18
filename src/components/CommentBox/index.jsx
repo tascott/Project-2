@@ -56,7 +56,7 @@ function CommentBox() {
         <div>
           <h1>Comments</h1>
           <form onSubmit={onSubmit}>
-          <input
+            <input
               onChange={onChange}
               type="text"
               name="username"
@@ -85,8 +85,8 @@ function CommentBox() {
                 if (comment.project_name === id) {
                   return (
                     <div key={comment.id} className="border rounded-md p-4">
-                    <p className="font-semibold mb-2">User: {comment.username}</p>
-                    <p className="font-light">Comment: {comment.payload}</p>
+                      <p className="font-semibold mb-2">User: {comment.username}</p>
+                      <p className="font-light">Comment: {comment.payload}</p>
                     </div>
                   );
                 }

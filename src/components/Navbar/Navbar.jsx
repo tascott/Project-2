@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 // Here we are using object destructuring assignment to pluck off our variables from the props object
 // We assign them to their own variable names
@@ -26,7 +27,7 @@ function Navbar({ currentPage, handlePageChange }) {
           Projects
         </a>
       </li>
-      
+
       <li className="nav-item">
         <a
           href="#contact"
@@ -35,6 +36,26 @@ function Navbar({ currentPage, handlePageChange }) {
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
         >
           Contact
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#team"
+          onClick={() => handlePageChange('Team')}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Team' ? 'nav-link active' : 'nav-link'}
+        >
+          Team
+        </a>
+      </li>
+      <li className="nav-item">
+        <a
+          href="#temp"
+          onClick={() => handlePageChange('Temp Selector')}
+          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+          className={currentPage === 'Temp' ? 'nav-link active' : 'nav-link'}
+        >
+          Temp Selector
         </a>
       </li>
     </ul>
