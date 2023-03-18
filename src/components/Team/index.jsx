@@ -1,6 +1,8 @@
 import "./style.css";
 import TeamMember from "../TeamMember";
 import team from "../../data/team.json";
+import WeatherProvider from "../weatherAPI/WeatherProvider";
+import WeatherDisplay from "../weatherAPI/WeatherDisplay";
 
 function Team() {
   return (
@@ -10,7 +12,10 @@ function Team() {
         {team.map((member) => (
           <TeamMember key={member.id} {...member} />
         ))}
-        </div>
+        <WeatherProvider>
+          <WeatherDisplay />
+        </WeatherProvider>
+      </div>
     </div>
   );
 }
