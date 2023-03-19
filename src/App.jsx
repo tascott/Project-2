@@ -13,7 +13,7 @@ function App() {
       <Route index element={<Home />} />
       <Route path="/team" element={<Team />} />
       <Route path="/projects" element={<ProjectList />} />
-      <Route path="/projects/:id" element={<ProjectPage />} />
+      <Route path="/projects/:urlFriendlyName" element={<ProjectPage />} />
       <Route path="/weather" element={<Weather />} />
     </Routes>
   );
