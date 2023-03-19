@@ -6,10 +6,10 @@ import { useState } from "react";
 import InvoiceGenerator from "../../components/InvoiceGenerator";
 
 function ProjectPage() {
-  const { id } = useParams();
+  const { urlFriendlyName } = useParams();
 
   var selectedProject = projects.find(function (project) {
-    return project.id === Number(id);
+    return project.urlFriendlyName === urlFriendlyName;
   });
 
   const [isVerified, setIsVerified] = useState(false);

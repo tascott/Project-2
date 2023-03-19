@@ -2,6 +2,7 @@
     {
       "client_name": "ABC Enterprises",
       "website_name": "ABC Enterprises Online Store",
+      "urlFriendlyName": "abc-enterprises-online-store",
       "client_location": "Los Angeles, California",
       "website_description": "An e-commerce website that sells products for home and garden.",
       "project_start_date": "2022-01-01",
@@ -14,6 +15,7 @@
     {
       "client_name": "XYZ Corporation",
       "website_name": "XYZ Corporation Website",
+      "urlFriendlyName": "xyz-corporation-website",
       "client_location": "London, United Kingdom",
       "website_description": "A corporate website that showcases the company's services and products.",
       "project_start_date": "2022-02-15",
@@ -26,6 +28,7 @@
     {
       "client_name": "123 Industries",
       "website_name": "123 Industries Customer Portal",
+      "urlFriendlyName": "123-industries-customer-portal",
       "client_location": "New York, New York",
       "website_description": "A customer portal that allows customers to manage their accounts and access support.",
       "project_start_date": "2022-03-01",
@@ -38,6 +41,7 @@
     {
       "client_name": "Acme Corporation",
       "website_name": "Acme Corporation Intranet",
+      "urlFriendlyName": "acme-corporation-intranet",
       "client_location": "San Francisco, California",
       "website_description": "An internal website that serves as a central hub for company information and resources.",
       "project_start_date": "2022-04-01",
@@ -50,6 +54,7 @@
     {
       "client_name": "The Daily News",
       "website_name": "The Daily News Website",
+      "urlFriendlyName": "the-daily-news-website",
       "client_location": "Toronto, Canada",
       "website_description": "A news website that covers local and national news.",
       "project_start_date": "2022-05-01",
@@ -62,6 +67,7 @@
     {
       "client_name": "Green Thumb Nursery",
       "website_name": "Green Thumb Nursery Blog",
+      "urlFriendlyName": "green-thumb-nursery-blog",
       "client_location": "Seattle, Washington",
       "website_description": "A blog that provides gardening tips and advice.",
       "project_start_date": "2022-06-01",
@@ -74,6 +80,7 @@
     {
       "client_name": "Fitness First",
       "website_name": "Fitness First Online Booking System",
+      "urlFriendlyName": "fitness-first-online-booking-system",
       "client_location": "Sydney, Australia",
       "website_description": "An online booking system that allows members to reserve classes and book personal training sessions.",
       "project_start_date": "2022-07-01",
@@ -86,6 +93,7 @@
     {
       "client_name": "XYZ Corporation",
       "website_name": "XYZ Corporation Mobile App",
+      "urlFriendlyName": "xyz-corporation-mobile-app",
       "client_location": "Paris, France",
       "website_description": "A mobile app that allows customers to access the company's services and products.",
       "project_start_date": "2022-08-01",

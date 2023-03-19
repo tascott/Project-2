@@ -1,7 +1,6 @@
 import "./style.css";
 
 function TeamMember(props) {
-  console.log(props);
   return (
     <div className="TeamMember">
       <h1>---</h1>

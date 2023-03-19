@@ -11,7 +11,7 @@ function ProjectList() {
       {projects.map((project) => (
         <div className="projectCardContainer" key={project.id}>
           <ProjectCard key={project.id} {...project} />
-          <Link to={`/projects/${project.id}`}>View Project</Link>
+          <Link to={`/projects/${project.urlFriendlyName}`}>View Project</Link>
         </div>
       ))}
       </div>
