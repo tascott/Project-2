@@ -9,22 +9,27 @@ import Weather from './components/weatherAPI/Weather';
 
 function App() {
   return (
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="/team" element={<Team />} />
-      <Route path="/projects" element={<ProjectList />} />
-      <Route path="/projects/:urlFriendlyName" element={<ProjectPage />} />
-      <Route path="/weather" element={<Weather />} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/projects" element={<ProjectList />} />
+        <Route path="/projects/:urlFriendlyName" element={<ProjectPage />} />
+        <Route path="/weather" element={<Weather />} />
+      </Routes>
+    </Router >
   );
 }
 
-export default function WrappedApp() {
+function WrappedApp() {
   return (
     <Router>
-
-      {/* <Navbar /> */}
-      <App />
+      <Routes>
+        <Route element={<Navbar />} />
+        <Route element={<App />} />
+      </Routes>
     </Router>
   );
 }
+
+export default WrappedApp;;

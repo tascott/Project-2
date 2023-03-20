@@ -6,7 +6,7 @@ function Home(props) {
     <div className="home">
       <h1>Home</h1>
       <Link to="/team">
-        Go to Team
+        Team
         <br />
       </Link>
       <Link to="/projects">
@@ -15,10 +15,6 @@ function Home(props) {
       </Link>
       <Link to="/weather">
         Go to Temp Selector
-        <br />
-      </Link>
-      <Link to="/team">
-        Go to Team Members
         <br />
       </Link>
     </div>
