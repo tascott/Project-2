@@ -1,25 +1,36 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Team from './components/Team';
 import ProjectList from './components/ProjectList';
 import ProjectPage from './pages/Project';
 import Navbar from './components/Navbar/Navbar';
 import Weather from './components/weatherAPI/Weather';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NotFound from './pages/NotFound';
+
+
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route index element={<Home />} />
+    <div className='App'>
 
-        <Route path="/team" element={<Team />} />
-        <Route path="/projects" element={<ProjectList />} />
-        <Route path="/projects/:urlFriendlyName" element={<ProjectPage />} />
-        <Route path="/weather" element={<Weather />} />
+      <Navbar />
+      <Header />
+      <Routes>
+        <Route index path='/' element={<Home />} />
+        <Route>
+          <Route path='/team' element={<Team />} />
+          <Route path="/projects" element={<ProjectList />} />
+          <Route path="/project/:projectID" element={<ProjectPage />} />
+          <Route path="/weather" element={<Weather />} />
+          <Route path="/*" element={<NotFound />} />
+        </Route>
+
       </Routes>
-    </Router >
+      <Footer />
+    </div>
   );
 }
 
