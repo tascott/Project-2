@@ -7,12 +7,11 @@ import InvoiceGenerator from "../../components/InvoiceGenerator";
 
 function ProjectPage() {
   const { urlFriendlyName } = useParams();
+  const [isVerified, setIsVerified] = useState(false);
 
   var selectedProject = projects.find(function (project) {
     return project.urlFriendlyName === urlFriendlyName;
   });
-
-  const [isVerified, setIsVerified] = useState(false);
 
   const checkPw = () => {
     // gets the current input value
@@ -26,14 +25,6 @@ function ProjectPage() {
   };
 
   const YourApp = () => {
-    const data = {
-      invoiceNumber: 123,
-      invoiceDate: "01/01/2021",
-      dueDate: "01/01/2021",
-      clientName: selectedProject.client_name,
-      clientAddress: selectedProject.client_location,
-    };
-
     return (
       <div className="project">
         <h1>Project ID: {selectedProject.id}</h1>
@@ -45,10 +36,6 @@ function ProjectPage() {
         <p>Estimated Cost: {selectedProject.estimated_costs}</p>
         {/* <CommentBox /> */}
         <Link to={`/projects`}>Back to Project List</Link>
-
-        <div className="invoice">
-          <InvoiceGenerator data={data} />
-        </div>
       </div>
     );
   };
@@ -58,9 +45,11 @@ function ProjectPage() {
       {isVerified ? (
         <YourApp />
       ) : (
-        <form onSubmit={checkPw}>
-          <input id="password" name="password" />
-          <button>open sesame</button>
+          <form onSubmit={checkPw}>
+          <h3>Please enter the password</h3>
+            <input id="password" name="password" />
+            <br />
+          <button>Enter</button>
         </form>
       )}
     </div>

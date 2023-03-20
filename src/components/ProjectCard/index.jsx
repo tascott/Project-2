@@ -1,14 +1,12 @@
 import "./style.css";
-import { useParams } from "react-router-dom";
-import projects from "../../data/projects.json";
 
 function ProjectCard(props) {
 
   return (
     <div className="project-card">
-      <h2>Project ID: {props.id}</h2>
-      <h3>Client: {props.client_name}</h3>
-      <h3>Client Location: {props.client_location}</h3>
+      <h1 className="client">{props.client_name} <span className="location">{props.client_location}</span></h1>
+      <h3 className="name">{props.website_name}</h3>
+      <h4 className="cost">Estimated Cost: ${props.estimated_costs}</h4>
     </div>
   );
 }
