@@ -1,0 +1,18 @@
+.client {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.name {
+  font-size: 1.2rem;
+}
+
+.cost {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
