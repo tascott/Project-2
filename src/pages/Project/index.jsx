@@ -13,10 +13,12 @@ function ProjectPage() {
     return project.urlFriendlyName === urlFriendlyName;
   });
 
-  const checkPw = () => {
+  const checkPw = (e) => {
+    e.preventDefault();
     // gets the current input value
     const answer = document.getElementById("password").value;
 
+    //insecure but hardcoded password for now
     if (answer === "yourSecretPassword") {
       setIsVerified(true);
     } else {
@@ -49,7 +51,7 @@ function ProjectPage() {
           <h3>Please enter the password</h3>
             <input id="password" name="password" />
             <br />
-          <button>Enter</button>
+          <button type="submit">Enter</button>
         </form>
       )}
     </div>
