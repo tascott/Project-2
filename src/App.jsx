@@ -21,7 +21,7 @@ function App() {
         <Route>
           <Route path='/team' element={<Team />} />
           <Route path="/projects" element={<ProjectList />} />
-          <Route path="/project/:projectID" element={<ProjectPage />} />
+          <Route path="/projects/:urlFriendlyName" element={<ProjectPage />} />
           <Route path="/weather" element={<Weather />} />
           <Route path="/generate" element={<InvoiceGenerator />} />
           <Route path="/*" element={<NotFound />} />
