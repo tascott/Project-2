@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import InvoiceTemplate from '../InvoiceTemplate';
+import './style.css';
+
 const InvoiceGenerator = ({ data }) => {
   const invoiceRef = useRef();
 
@@ -18,7 +20,6 @@ const InvoiceGenerator = ({ data }) => {
 
   return (
     <div>
-      <h3>Invoice Generator.jsx</h3>
       <InvoiceTemplate ref={invoiceRef} data={data} />
       <button onClick={generatePDF}>Download PDF</button>
     </div>

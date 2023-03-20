@@ -21,6 +21,10 @@ function Home(props) {
         Go to Team Members
         <br />
       </Link>
+      <Link to="/generate">
+        Go to Invoice Generator
+        <br />
+      </Link>
     </div>
   );
 }
