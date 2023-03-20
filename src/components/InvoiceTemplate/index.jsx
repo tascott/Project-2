@@ -1,9 +1,7 @@
 import React, { forwardRef } from "react";
 
 const InvoiceTemplate = forwardRef(({ data }, ref) => {
-  console.log(data)
-  // const { invoiceNumber, invoiceDate, paymentDueDate, clientName, clientAddress } =
-  const { clientName, clientAddress } =
+  const { invoiceDate, paymentDueDate, clientName, clientAddress, notes } =
     data;
 
   return (
@@ -13,15 +11,12 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
       style={{ width: '500px', height: '600px'}}
     >
       <h6>Invoice</h6>
-      {/* <p>
-        <strong>Invoice number:</strong> {invoiceNumber}
-      </p>
       <p>
         <strong>Invoice date:</strong> {invoiceDate}
       </p>
       <p>
         <strong>Payment due date:</strong> {paymentDueDate}
-      </p> */}
+      </p>
 
       <div
         style={{
@@ -33,6 +28,7 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
         <div>
           <h3>{clientName}</h3>
           <p>{clientAddress}</p>
+          <p>{notes}</p>
         </div>
       </div>
 

@@ -1,24 +1,13 @@
 import "./style.css";
 import projects from "../../data/projects.json";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import InvoiceGenerator from "../../components/InvoiceGenerator";
-
-// get the state (invoice, team member, project), initially set to '', then when clicked, change the state and render the correspnding component
-
-// Need To Disable button unless a project is selected
-
-//select the project to pass in to the generator
-// var selectedProject = projects.find(function (project) {
-//   console.log(project)
-//   // return project.urlFriendlyName === urlFriendlyName;
-// });
 
 function ProjectPage() {
   const [state, setState] = useState('');
   const [currentProject, setCurrentProject] = useState('');
-  const [data, setData] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+  const [data, setData] = useState({});
+  const [generatorOpen, setGeneratorOpen] = useState(false);
 
   const updateCurrentProject = (e) => {
     setCurrentProject(e.target.value);
@@ -28,22 +17,26 @@ function ProjectPage() {
     setData(selectedProject);
   }
 
-  const handleClick = (e) => {
+  const isDisabled = () => {
+    return currentProject === '' ? true : false;
+  }
+
+  const handleRenderGen = (e) => {
     setState(e.target.value);
-  }
-
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const updatedData = {
+    setData({
       ...data,
-      newProperty: inputValue,
-    };
-    setData(updatedData);
-    setInputValue("");
+      invoiceDate: new Date().toJSON().slice(0, 10),
+    });
+    setGeneratorOpen(true);
+  }
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const { name, value } = e.target;
+      setData({
+        ...data,
+        [name]: value,
+      });
   }
 
   return (
@@ -57,30 +50,40 @@ function ProjectPage() {
             )
           })}
         </select>
-        <button onClick={handleClick} value="invoice">Generate Invoice</button>
+        <button onClick={handleRenderGen} disabled={isDisabled()} value="invoice">Start Building Invoice</button>
       </div>
-      <p>----------</p>
-      <form onSubmit={handleSubmit}>
+      {generatorOpen && currentProject != '' &&
+        <form>
         <label htmlFor="invoiceDate">Invoice Date:</label>
         <input
           id="invoiceDate"
+          name="invoiceDate"
           type="text"
           value={new Date().toJSON().slice(0, 10)}
-          onChange={handleChange}
-        />
-        <label htmlFor="PaymentDueDate">Payment due by:</label>
+          onChange={handleUpdate}
+          />
+        <br />
+        <label htmlFor="paymentDueDate">Payment due by:</label>
         <input
-          id="PaymentDueDate"
+          id="paymentDueDate"
+          name="paymentDueDate"
           type="date"
-          value={inputValue}
-          onChange={handleChange}
-        />
-        <button type="submit">Submit</button>
-      </form>
-      <p>----------</p>
-      {JSON.stringify(data)}
-      {state === 'invoice' && <InvoiceGenerator data={data} />}
+          value={data.paymentDueDate || ''}
+          onChange={handleUpdate}
+          />
 
+        <br />
+        <label htmlFor="notes">Notes</label>
+        <input
+          id="notes"
+          name="notes"
+          type="text"
+          value={data.notes || ''}
+          onChange={handleUpdate}
+        />
+      </form>
+      }
+      {state === 'invoice' && currentProject != '' && <InvoiceGenerator data={data} />}
     </div>
   );
 }
