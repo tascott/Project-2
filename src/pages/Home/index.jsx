@@ -5,22 +5,7 @@ function Home(props) {
   return (
     <div className="home">
       <h1>Home</h1>
-      <Link to="/team">
-        Go to Team
-        <br />
-      </Link>
-      <Link to="/projects">
-        Go to Projects
-        <br />
-      </Link>
-      <Link to="/weather">
-        Go to Temp Selector
-        <br />
-      </Link>
-      <Link to="/team">
-        Go to Team Members
-        <br />
-      </Link>
+
     </div>
   );
 }
