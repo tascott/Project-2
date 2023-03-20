@@ -26,6 +26,12 @@
     padding: 5px 10px;
 }
 
+.to-do-check {
+    margin: 0 10px;
+    height: 15px;
+    width: 15px;
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
