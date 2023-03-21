@@ -1,0 +1,50 @@
+.generatorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-gradient-dark);
+    form {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        .form-section {
+            max-width: 300px;
+            padding: 1rem;
+        }
+        .form-section:not(:nth-child(3)) {
+            flex: 1;
+        }
+        .checks {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            .custom-checkbox {
+                padding-right: 30px;
+                input {
+                    margin-right: 10px;
+                }
+            }
+            .custom-checkbox:nth-child(1) {
+                padding: 0 0px
+            }
+        }
+    }
+}
+
+.generator-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
