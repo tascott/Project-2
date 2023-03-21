@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   // start sever automatically
   server: {
-    open: '/index.html',
+    open: '/',
   },
 });

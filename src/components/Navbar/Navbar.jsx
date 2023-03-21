@@ -3,7 +3,11 @@ import '../../scss/style.css';
 
 function Navbar(props) {
   return (
-    <div className="Navbar">
+    <div className="navbar">
+      <Link to="/home">
+        Home
+        <br />
+      </Link>
       <Link to="/team">
         Team
         <br />
