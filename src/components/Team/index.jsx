@@ -1,4 +1,4 @@
-import "./style.css";
+import "../../scss/style.css";
 import TeamMember from "../TeamMember";
 import team from "../../data/team.json";
 import WeatherProvider from "../weatherAPI/WeatherProvider";

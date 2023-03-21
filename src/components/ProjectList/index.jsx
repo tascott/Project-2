@@ -1,4 +1,4 @@
-import "./style.css";
+import "../../scss/style.css";
 import ProjectCard from "../ProjectCard";
 import projects from "../../data/projects.json";
 import { Link } from "react-router-dom";

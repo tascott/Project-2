@@ -4,26 +4,33 @@ import '../../scss/style.css';
 function Navbar(props) {
   return (
     <div className="navbar">
-      <Link to="/">
-        Home
-        <br />
-      </Link>
-      <Link to="/team">
-        Team
-        <br />
-      </Link>
-      <Link to="/projects">
-        Projects
-        <br />
-      </Link>
-      <Link to="/weather">
-        Temp Selector
-        <br />
-      </Link>
-      <Link to="/generate">
-        Generate
-        <br />
-      </Link>
+      <button>
+        <Link to="/">
+          Home
+
+        </Link>
+      </button>
+      <button>
+        <Link to="/team">
+          Team
+
+        </Link>
+      </button>
+      <button>
+        <Link to="/projects">
+          Projects
+        </Link>
+      </button>
+      <button>
+        <Link to="/weather">
+          Temp Selector
+        </Link>
+      </button>
+      <button>
+        <Link to="/generate">
+          Generate
+        </Link>
+      </button>
     </div>
   );
 }
