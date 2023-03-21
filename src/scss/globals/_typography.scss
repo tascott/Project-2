@@ -1,0 +1,35 @@
+@use '../util' as u;
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+  mix-blend-mode: luminosity;
+  text-shadow: 2px 2px 4px black;
+  // background-color: #00000035;
+}
+
+h1 {
+  font-size: clamp(u.rem(28), u.rem(28) + 3vw, u.rem(60));
+
+}
+
+h2 {
+  // font-size: clamp(22px, 14px + 2vw, 45px);
+  font-size: clamp(u.rem(22), u.rem(14) + 2vw, u.rem(40));
+}
+
+p {
+  margin-top: 0;
+  font-size: u.rem(16);
+  mix-blend-mode: luminosity;
+  text-shadow: 2px 2px 4px black;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
