@@ -95,7 +95,6 @@ button {
   position: relative;
 }
 
- background-for-pop-up
 .projectToDo {
   background-color: var(--background-color);
   opacity: 0.8;
@@ -140,9 +139,6 @@ button {
     transform: rotate(360deg);
   }
 }
-
-
-
 select {
   appearance: none;
   padding: 0.5rem 2rem;
@@ -194,11 +190,11 @@ input[type=date],
 textarea {
   appearance: none;
   display: block;
-  width: 100%;
-  padding: 1rem 1.5rem;
-  font-size: 1.2rem;
+  width: 25vw;
+  padding: 0.5rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: #333;
+  color: #222;
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 0.5rem;
@@ -294,7 +290,6 @@ input[type=checkbox] {
   line-height: 40px;
 }
 
-
 h1,
 h2,
 h3 {
@@ -361,16 +356,16 @@ a:active {
   padding: 2.5rem;
 }
 .grid__main {
-  background-color: hsl(240, 96%, 32%);
+  background-color: #0303a0;
 }
 @media (min-width: 43.75em) {
   .grid__main {
-    background-color: hsl(120, 100%, 16%);
+    background-color: #005200;
   }
 }
 @media (min-width: 56.25em) {
   .grid__main {
-    background-color: hsl(39, 100%, 35%);
+    background-color: #b37400;
   }
 }
 @media (max-width: 56.24875em) {
