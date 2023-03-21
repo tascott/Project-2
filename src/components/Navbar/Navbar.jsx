@@ -4,7 +4,7 @@ import '../../scss/style.css';
 function Navbar(props) {
   return (
     <div className="navbar">
-      <Link to="/home">
+      <Link to="/">
         Home
         <br />
       </Link>
