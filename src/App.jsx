@@ -4,12 +4,15 @@ import Home from './pages/Home';
 import Team from './components/Team';
 import ProjectList from './components/ProjectList';
 import ProjectPage from './pages/Project';
+import Header from './components/weatherAPI/Header';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer';
 import Weather from './components/weatherAPI/Weather';
 
 function App() {
   return (
     <Router>
+      <Header />
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
@@ -19,6 +22,7 @@ function App() {
         <Route path="/projects/:urlFriendlyName" element={<ProjectPage />} />
         <Route path="/weather" element={<Weather />} />
       </Routes>
+      <Footer />
     </Router >
   );
 }
