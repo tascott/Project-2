@@ -110,14 +110,26 @@ a:active {
 .navbar {
   display: flex;
   gap: 1rem;
+  position: sticky;
+  top: 5vh;
 }
 
 .navbar a {
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: rgba(118, 130, 141, 0.1);
+  background-color: rgba(118, 130, 141, 0.3);
   color: var(--text-color);
+}
+
+.header {
+  position: sticky;
+  top: 1vh;
+}
+
+.footer {
+  position: sticky;
+  bottom: 1vh;
 }
 
 /*# sourceMappingURL=style.css.map */

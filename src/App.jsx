@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Team from './components/Team';
 import ProjectList from './components/ProjectList';
 import ProjectPage from './pages/Project';
-import Header from './components/weatherAPI/Header';
+import Header from './components/Header';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer';
 import Weather from './components/weatherAPI/Weather';
