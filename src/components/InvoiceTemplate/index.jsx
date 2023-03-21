@@ -6,7 +6,7 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
     data;
 
   return (
-    <div
+    <div className="invoiceBG"
       ref={ref}
       id="invoice"
       style={{ width: '500px', height: '600px' }}

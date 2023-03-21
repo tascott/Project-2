@@ -63,6 +63,10 @@ a:active {
   --text-color: #FFF0DE;
 }
 
+.invoiceBG {
+  background-color: white;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
