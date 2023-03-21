@@ -9,12 +9,12 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer';
 import Weather from './components/weatherAPI/Weather';
 import InvoiceGenerator from './pages/Generate';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <Router>
-      <Header />
-      <Navbar />
+      <Layout>
       <Routes>
         <Route index element={<Home />} />
         <Route path="/team" element={<Team />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/weather" element={<Weather />} />
         <Route path="/generate" element={<InvoiceGenerator />} />
       </Routes>
-      <Footer />
+        </Layout>
     </Router >
   );
 }
