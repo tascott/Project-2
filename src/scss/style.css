@@ -1,4 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+:root {
+  --background-color: #1c1c1c;
+  --text-color: #FFF0DE;
+}
+
+.invoiceBG {
+  background-color: white;
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -38,6 +47,14 @@ body {
   padding: 0 40px;
 }
 
+.invoice {
+  background: var(--background-color);
+  border: 1px solid #f4f4f4;
+  margin: 20px 25px;
+  padding: 20px;
+  position: relative;
+}
+
 h1,
 h2,
 h3 {
@@ -69,15 +86,6 @@ a:active {
   text-decoration: none;
 }
 
-:root {
-  --background-color: #1c1c1c;
-  --text-color: #FFF0DE;
-}
-
-.invoiceBG {
-  background-color: white;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -96,16 +104,16 @@ a:active {
   padding: 2.5rem;
 }
 .grid__main {
-  background-color: hsl(240, 96%, 32%);
+  background-color: #0303a0;
 }
 @media (min-width: 43.75em) {
   .grid__main {
-    background-color: hsl(120, 100%, 16%);
+    background-color: #005200;
   }
 }
 @media (min-width: 56.25em) {
   .grid__main {
-    background-color: hsl(39, 100%, 35%);
+    background-color: #b37400;
   }
 }
 @media (max-width: 56.24875em) {
@@ -145,6 +153,28 @@ a:active {
 .layout--container__footer {
   margin-top: auto;
   padding: 1rem;
+}
+
+.generatorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.generator-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

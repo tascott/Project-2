@@ -1,4 +1,4 @@
-@use '../util' as u;
+@use '../util' as util;
 
 h1,
 h2,
@@ -12,18 +12,18 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(u.rem(28), u.rem(28) + 3vw, u.rem(60));
+  font-size: clamp(util.rem(28), util.rem(28) + 3vw, util.rem(60));
 
 }
 
 h2 {
   // font-size: clamp(22px, 14px + 2vw, 45px);
-  font-size: clamp(u.rem(22), u.rem(14) + 2vw, u.rem(40));
+  font-size: clamp(util.rem(22), util.rem(14) + 2vw, util.rem(40));
 }
 
 p {
   margin-top: 0;
-  font-size: u.rem(16);
+  font-size: util.rem(16);
   mix-blend-mode: luminosity;
   text-shadow: 2px 2px 4px black;
 }
@@ -33,3 +33,23 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
+// Card typography
+// .client {
+//   font-size: 2rem;
+//   font-weight: bold;
+// }
+
+// .location {
+//   font-size: 0.8rem;
+//   color: #999;
+// }
+
+// .name {
+//   font-size: 1.2rem;
+// }
+
+// .cost {
+//   font-size: 1.2rem;
+//   font-weight: bold;
+// }
