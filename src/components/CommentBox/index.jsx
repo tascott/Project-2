@@ -1,4 +1,4 @@
-import "./style.css";
+import "../../scss/style.css";
 import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";

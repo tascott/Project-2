@@ -1,12 +1,12 @@
 @use '../util' as u;
 @use '../globals' as g;
 
-.Navbar {
+.navbar {
   display: flex;
   gap: 1rem;
 }
 
-.Navbar a {
+.navbar a {
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 1rem;
