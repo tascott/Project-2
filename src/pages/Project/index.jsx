@@ -1,4 +1,4 @@
-import "./style.css";
+import "../../scss/style.css";
 import projects from "../../data/projects.json";
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
@@ -47,10 +47,10 @@ function ProjectPage() {
       {isVerified ? (
         <YourApp />
       ) : (
-          <form onSubmit={checkPw}>
+        <form onSubmit={checkPw}>
           <h3>Please enter the password</h3>
-            <input id="password" name="password" />
-            <br />
+          <input id="password" name="password" />
+          <br />
           <button type="submit">Enter</button>
         </form>
       )}

@@ -1,4 +1,5 @@
-@use '../util' as util;
+@use 'fonts' as f;
+@use 'colors' as col;
 
 html {
   box-sizing: border-box;
@@ -18,7 +19,7 @@ body {
 
 :root {
   padding: 0;
-  font-family: util.$font;
+  font-family: f.$font;
   background-color: var(--background-color);
   color: var(--text-color);
   background: url(../../../Design/robert-zunikoff-xZzRMSAe3I4-unsplash.webp);
