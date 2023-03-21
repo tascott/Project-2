@@ -2,8 +2,12 @@ import React, { forwardRef } from "react";
 import "../../scss/style.css";
 
 const InvoiceTemplate = forwardRef(({ data }, ref) => {
-  const { invoiceDate, paymentDueDate, clientName, clientAddress, notes } =
+  const { invoiceDate, paymentDueDate, clientName, clientAddress, notes, seo, design, logoCreation, contentCreation  } =
     data;
+
+  const checkboxData = [notes, seo, design, logoCreation, contentCreation];
+
+  console.log('data', data)
 
   return (
     <div className="invoiceBG"
@@ -59,12 +63,39 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td style={{ padding: "8px" }}>Web Development</td>
-            <td style={{ padding: "8px" }}>1</td>
-            <td style={{ padding: "8px" }}>1000</td>
-            <td style={{ padding: "8px" }}>1000</td>
-          </tr>
+        {data.seo &&
+              <tr>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>SEO</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>1</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+              </tr>
+          }
+          {data.design &&
+              <tr>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>Design</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>1</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+              </tr>
+          }
+          {data.logoCreation &&
+              <tr>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>Logo Creation</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>1</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+              </tr>
+          }
+          {data.contentCreation &&
+              <tr>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>Content Creation</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>1</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+                <td style={{ padding: "8px 0", textAlign:"center" }}>500</td>
+              </tr>
+          }
+
         </tbody>
       </table>
     </div>

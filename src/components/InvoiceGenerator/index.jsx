@@ -19,9 +19,9 @@ const InvoiceGenerator = ({ data }) => {
   };
 
   return (
-    <div>
+    <div className='invoice-container'>
       <InvoiceTemplate ref={invoiceRef} data={data} />
-      <button onClick={generatePDF}>Download PDF</button>
+      <button className="generateBtn" onClick={generatePDF}>Download PDF</button>
     </div>
   );
 };

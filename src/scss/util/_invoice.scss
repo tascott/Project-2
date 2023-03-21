@@ -1,0 +1,25 @@
+#invoice {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    p {
+      text-shadow: none;
+    }
+  }
+
+.generateBtn {
+    margin: 15px auto 0 auto;
+    display: block;
+  }
+
+  .generateBtn:hover {
+    background-color: #16a085;
+  }
+
+.invoice-container {
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+}
