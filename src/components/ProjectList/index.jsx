@@ -31,7 +31,7 @@ function ProjectList() {
             <ProjectCard key={project.id} {...project} />
 
             <button onClick={() => toggleComponent(project.id)}>
-              {isShown && selectedId === project.id ? 'Close' : 'View More'}
+              {isShown && selectedId === project.id ? 'Close' : 'View to-dos'}
             </button>
 
             {isShown && selectedId === project.id && (

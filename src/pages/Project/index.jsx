@@ -8,6 +8,7 @@ import InvoiceGenerator from "../../components/InvoiceGenerator";
 function ProjectPage() {
   const { urlFriendlyName } = useParams();
   const [isVerified, setIsVerified] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   var selectedProject = projects.find(function (project) {
     return project.urlFriendlyName === urlFriendlyName;
@@ -19,18 +20,18 @@ function ProjectPage() {
     const answer = document.getElementById("password").value;
 
     //insecure but hardcoded password for now
-    if (answer === "yourSecretPassword") {
+    if (answer === "password") {
       setIsVerified(true);
     } else {
-      alert("Sorry, that's not it");
+      setShowError(true);
+      setTimeout(() => setShowError(false), 3000); // Show error message for 3 seconds
     }
   };
 
   const YourApp = () => {
     return (
       <div className="project">
-        <h1>Project ID: {selectedProject.id}</h1>
-        <h2>Client: {selectedProject.client_name}</h2>
+        <h2>{selectedProject.client_name}</h2>
         <h3>Client Location: {selectedProject.client_location}</h3>
         <p>Client Website: {selectedProject.website_url}</p>
         <p>Project start: {selectedProject.project_start_date}</p>
@@ -47,11 +48,14 @@ function ProjectPage() {
       {isVerified ? (
         <YourApp />
       ) : (
-        <form onSubmit={checkPw}>
+        <form className="pw-form" onSubmit={checkPw}>
           <h3>Please enter the password</h3>
-          <input id="password" name="password" />
+          <input id="password" name="password" type="password"/>
           <br />
-          <button type="submit">Enter</button>
+            <button type="submit">Enter</button>
+            {showError && (
+            <p className="error-message error">Sorry, that's not it. Please try again.</p>
+          )}
         </form>
       )}
     </div>

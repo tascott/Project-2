@@ -51,11 +51,11 @@ function CommentBox() {
   };
 
   return (
-    <div>
+    <div className="comments-box">
       <title>Comments Box</title>
       <div>
         <div>
-          <h1>Comments</h1>
+          <h3>Comments</h3>
           <form onSubmit={onSubmit}>
             <input
               onChange={onChange}
@@ -76,9 +76,9 @@ function CommentBox() {
             <button className="button btn btn-dark">
               Submit
             </button>
-            <div className="button btn btn-danger" onClick={getCommentList}>
+            <button className="button btn btn-danger" onClick={getCommentList}>
               Refresh
-            </div>
+            </button>
 
             <div className="comment-section">
               {/* If commentlist.id is equal to the params id, render it */}
