@@ -4,12 +4,14 @@
 .navbar {
   display: flex;
   gap: 1rem;
+  position: sticky;
+  top: 5vh;
 }
 
 .navbar a {
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: rgb(118, 130, 141, 0.1);
+  background-color: rgb(118, 130, 141, 0.3);
   color: var(--text-color);
 }
