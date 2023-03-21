@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer';
 import Weather from './components/weatherAPI/Weather';
+import InvoiceGenerator from './pages/Generate';
 
 function App() {
   return (
@@ -16,11 +17,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
-
         <Route path="/team" element={<Team />} />
         <Route path="/projects" element={<ProjectList />} />
         <Route path="/projects/:urlFriendlyName" element={<ProjectPage />} />
         <Route path="/weather" element={<Weather />} />
+        <Route path="/generate" element={<InvoiceGenerator />} />
       </Routes>
       <Footer />
     </Router >

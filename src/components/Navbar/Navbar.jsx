@@ -20,6 +20,10 @@ function Navbar(props) {
         Temp Selector
         <br />
       </Link>
+      <Link to="/generate">
+        Generate
+        <br />
+      </Link>
     </div>
   );
 }
