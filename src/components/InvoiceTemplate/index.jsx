@@ -1,4 +1,5 @@
 import React, { forwardRef } from "react";
+import "../../scss/style.css";
 
 const InvoiceTemplate = forwardRef(({ data }, ref) => {
   const { invoiceDate, paymentDueDate, clientName, clientAddress, notes } =
@@ -8,7 +9,7 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
     <div
       ref={ref}
       id="invoice"
-      style={{ width: '500px', height: '600px'}}
+      style={{ width: '500px', height: '600px' }}
     >
       <h6>Invoice</h6>
       <p>

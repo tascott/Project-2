@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
 import InvoiceTemplate from '../InvoiceTemplate';
-import './style.css';
+import "../../scss/style.css";
 
 const InvoiceGenerator = ({ data }) => {
   const invoiceRef = useRef();
