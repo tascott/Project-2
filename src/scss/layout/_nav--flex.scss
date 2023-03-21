@@ -1,0 +1,15 @@
+@use '../util' as u;
+@use '../globals' as g;
+
+.Navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.Navbar a {
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(118, 130, 141, 0.1);
+  color: var(--text-color);
+}
