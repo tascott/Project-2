@@ -34,6 +34,12 @@ a:active {
   text-decoration: none;
 }
 
+p.error {
+  background-color: red;
+  padding: 20px;
+  margin-top: 10px;
+}
+
 // Card typography
 // .client {
 //   font-size: 2rem;
