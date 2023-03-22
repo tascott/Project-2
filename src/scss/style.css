@@ -28,7 +28,7 @@ body {
   padding: 0;
   font-family: "Roboto Slab", sans-serif;
   color: var(--text-color);
-  background: url(../../../Design/robert-zunikoff-xZzRMSAe3I4-unsplash.webp);
+  background: url(/bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
