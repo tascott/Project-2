@@ -337,6 +337,12 @@ p.error {
   padding: 20px;
 }
 
+.project--card_img {
+  max-width: 100px;
+  background-color: white;
+  border-radius: 50%;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;

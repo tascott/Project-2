@@ -11,7 +11,8 @@
       "estimated_costs": 0,
       "id": 1,
       "to-dos": [],
-      "jsonBinId": "64175489c0e7653a058aca05"
+      "jsonBinId": "64175489c0e7653a058aca05",
+      "image": "abc"
     },
     {
       "client_name": "XYZ Corporation",
@@ -25,7 +26,8 @@
       "estimated_costs": 0,
       "id": 2,
       "to-dos": [],
-      "jsonBinId": "64175cc8c0e7653a058acd60"
+      "jsonBinId": "64175cc8c0e7653a058acd60",
+      "image": "xyz"
     },
     {
       "client_name": "123 Industries",
@@ -39,7 +41,8 @@
       "estimated_costs": 0,
       "id": 3,
       "to-dos": [],
-      "jsonBinId": "64175d49ebd26539d0918cf4"
+      "jsonBinId": "64175d49ebd26539d0918cf4",
+      "image": "web123"
     },
     {
       "client_name": "Acme Corporation",
@@ -53,7 +56,8 @@
       "estimated_costs": 0,
       "id": 4,
       "to-dos": [],
-      "jsonBinId": "64175d51c0e7653a058acd95"
+      "jsonBinId": "64175d51c0e7653a058acd95",
+      "image": "acme"
     },
     {
       "client_name": "The Daily News",
@@ -67,7 +71,8 @@
       "estimated_costs": 0,
       "id": 5,
       "to-dos": [],
-      "jsonBinId": "64175d55ace6f33a22f1b689"
+      "jsonBinId": "64175d55ace6f33a22f1b689",
+      "image": "daily"
     },
     {
       "client_name": "Green Thumb Nursery",
@@ -81,7 +86,8 @@
       "estimated_costs": 0,
       "id": 6,
       "to-dos": [],
-      "jsonBinId": "64175d59ace6f33a22f1b68f"
+      "jsonBinId": "64175d59ace6f33a22f1b68f",
+      "image": "green"
     },
     {
       "client_name": "Fitness First",
@@ -95,7 +101,8 @@
       "estimated_costs": 0,
       "id": 7,
       "to-dos": [],
-      "jsonBinId": "64175d5dc0e7653a058acd9e"
+      "jsonBinId": "64175d5dc0e7653a058acd9e",
+      "image": "fitness"
     },
     {
       "client_name": "XYZ Corporation",
@@ -109,6 +116,7 @@
       "estimated_costs": 0,
       "id": 8,
       "to-dos": [],
-      "jsonBinId": "64175d63ebd26539d0918d00"
+      "jsonBinId": "64175d63ebd26539d0918d00",
+      "image": "xyz"
     }
 ]
