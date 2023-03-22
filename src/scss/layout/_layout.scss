@@ -98,6 +98,7 @@
 
 .feature:nth-of-type(2) {
   text-align: right;
+
   h2 {
     margin-left: auto;
   }
@@ -107,25 +108,31 @@
 @media screen and (max-width: 600px) {
   .feature {
     padding: 10px;
+
     span {
       display: none;
     }
   }
+
   .home-header {
     padding: 10px;
+
     h1 {
       margin-bottom: 5px;
     }
+
     h2 {
       margin-bottom: 5px;
       font-size: 1em;
     }
   }
 }
+
 .socialLinks {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   min-width: 20vw;
+  align-items: center;
 }
 
 .copytxt {

@@ -57,7 +57,7 @@ button {
 }
 
 .socialLogo {
-  height: 50px;
+  height: 35px;
 }
 
 #invoice {
@@ -580,6 +580,7 @@ p.error {
   .feature span {
     display: none;
   }
+
   .home-header {
     padding: 10px;
   }
@@ -593,8 +594,9 @@ p.error {
 }
 .socialLinks {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   min-width: 20vw;
+  align-items: center;
 }
 
 .copytxt {
