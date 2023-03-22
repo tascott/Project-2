@@ -7,9 +7,11 @@ import "../../scss/style.css";
 const Layout = ({ children }) => {
   return (
     <div className="layout--container">
-      <div className="layout--container__navbar">
-        <Header />
-        <Navbar />
+      <div className="wrapper--layoutContainer">
+        <div className="layout--container__navbar">
+          <Header />
+          <Navbar />
+        </div>
       </div>
       <div className="wrapper--main-footer">
         <main>{children}</main>

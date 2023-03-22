@@ -3,9 +3,9 @@ import FooterStructure from "./Footer";
 
 function Footer() {
   return (
-    <div className="footer">
+    <>
       <FooterStructure />
-    </div>
+    </>
   );
 };
 
