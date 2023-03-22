@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/Garage.webp';
 import "../../scss/style.css";
-import { Link } from "react-router-dom";
 
 import Linkedin from "../../assets/images/linkedin.png";
 import github from "../../assets/images/github-mark.png";
