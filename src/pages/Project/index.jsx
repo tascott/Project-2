@@ -38,7 +38,9 @@ function ProjectPage() {
         <p>Current Project Length: {selectedProject.current_project_length}</p>
         <p>Estimated Cost: {selectedProject.estimated_costs}</p>
         <CommentBox />
-        <Link to={`/projects`}>Back to Project List</Link>
+        <Link to={`/projects`}>
+          <button>Back to Project List</button>
+        </Link>
       </div>
     );
   };

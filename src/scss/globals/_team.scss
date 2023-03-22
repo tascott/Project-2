@@ -1,0 +1,33 @@
+.TeamMember {
+    background: rgba(0,0,0,0.5);
+    border: 2px solid #999;
+    padding: 10px;
+    margin-bottom: 10px;
+    a {
+        color: var(--highlight-color);
+        font-weight: bold;
+    }
+}
+
+.weather {
+    border: 2px solid;
+    font-size: 1.5em;
+    background-color: yellow;
+    color: #000;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.show-holidays {
+    display: flex;
+    padding: 5px;
+    border: 2px solid #999;
+    margin: 5px 0;
+    width: fit-content;
+    p {
+        margin: 0;
+        padding-top: 8px;
+    }
+}

@@ -7,7 +7,7 @@ function WeatherDisplay() {
   if (!weatherData) {
     // return <div>No weather data yet.</div>;
   } else {
-    return <div>{weatherData}°C</div>;
+    return <div className='weather'>{weatherData}°C</div>;
   }
 
 }

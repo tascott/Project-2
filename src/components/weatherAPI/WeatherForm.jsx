@@ -40,7 +40,7 @@ function WeatherForm(props) {
         onChange={(e) => setLocation(e.target.value)}
         placeholder="Enter a location"
       /> */}
-      <button type="submit">Get Weather</button>
+      <button type="submit" style={{cursor: "pointer"}} >Get Weather</button>
     </form>
   );
 }

@@ -1,3 +1,25 @@
 .comments-box {
-    border: 2px solid white;
+    border: 1px solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.comment-input {
+    margin: 10px 0;
+}
+
+.single-comment {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: #fff 1px solid;
+    padding: 10px;
+    margin: 10px 0;
+    .user {
+        font-weight: bold;
+        color: #fff;
+        font-size: 1.2em;
+    }
+    .comment {
+        color: #fff;
+    }
 }

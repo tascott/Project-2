@@ -11,7 +11,7 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
     <div className="invoiceBG"
       ref={ref}
       id="invoice"
-      style={{ width: '500px', height: '600px' }}
+      style={{ width: '100%', height: '100%' }}
     >
       <h6>Invoice</h6>
       <img className="project--card_img" src={imgSrc} alt={data.website_name} style={{ maxWidth: "100px" }} />
