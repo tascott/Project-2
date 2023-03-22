@@ -1,19 +1,17 @@
 import { Link } from 'react-router-dom';
 import '../../scss/style.css';
 
-function Navbar(props) {
+function Navbar() {
   return (
     <div className="navbar">
       <button>
         <Link to="/">
           Home
-
         </Link>
       </button>
       <button>
         <Link to="/team">
           Team
-
         </Link>
       </button>
       <button>
@@ -23,7 +21,7 @@ function Navbar(props) {
       </button>
       <button>
         <Link to="/generate">
-          Generate
+          Invoices
         </Link>
       </button>
     </div>

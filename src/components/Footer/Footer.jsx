@@ -25,7 +25,7 @@ function FooterStructure() {
 
       </div>
       <div sm={4} className="FooterLinks copytxt">
-        <p>Copyright &copy 2023: GARAGE web</p>
+        <p>Copyright &copy; 2023: GARAGE web</p>
       </div>
       <div>
         <Link to="/"><img src={logo} className="WGLogo" alt="Logo" /></Link>

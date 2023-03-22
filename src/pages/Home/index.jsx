@@ -29,7 +29,7 @@ function Home() {
 
       <section className="feature">
         <div className="feature-text">
-          <h2>Generate</h2>
+          <h2>Invoices</h2>
           <p>
             Say goodbye to tedious manual invoicing. Our user-friendly invoice
             generator allows you to create professional invoices tailored to
