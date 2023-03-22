@@ -7,46 +7,56 @@
     "hire_date": "2021-01-01",
     "github_repo": "https://github.com/johndoe",
     "email": "johndoe@example.com",
-    "telephone": "+1 (555) 123-4567"
+    "telephone": "+1 (555) 123-4567",
+    "countryCode": "US",
+    "region": "US-CA"
   },
   {
     "id": "id2",
     "name": "Jane Smith",
     "job_title": "Full-stack Developer",
-    "location": "New York, New York",
+    "location": "Belfast, Northern Ireland",
     "hire_date": "2021-02-01",
     "github_repo": "https://github.com/janesmith",
     "email": "janesmith@example.com",
-    "telephone": "+1 (555) 234-5678"
+    "telephone": "+1 (555) 234-5678",
+    "countryCode": "GB",
+    "region": "GB-NIR"
   },
   {
     "id": "id3",
     "name": "David Lee",
     "job_title": "Back-end Developer",
-    "location": "Toronto, Canada",
+    "location": "London, United Kingdom",
     "hire_date": "2021-03-01",
     "github_repo": "https://github.com/davidlee",
     "email": "davidlee@example.com",
-    "telephone": "+1 (555) 345-6789"
+    "telephone": "+1 (555) 345-6789",
+    "countryCode": "GB",
+    "region": "GB-ENG"
   },
   {
     "id": "id4",
     "name": "Amanda Brown",
     "job_title": "UI/UX Designer",
-    "location": "London, United Kingdom",
+    "location": "San Francisco, California",
     "hire_date": "2021-04-01",
     "github_repo": "https://github.com/amandabrown",
     "email": "amandabrown@example.com",
-    "telephone": "+44 20 1234 5678"
+    "telephone": "+44 20 1234 5678",
+    "countryCode": "US",
+    "region": "US-CA"
   },
   {
     "id": "id5",
     "name": "Juan Perez",
     "job_title": "Web Developer",
-    "location": "Mexico City, Mexico",
+    "location": "Spain",
     "hire_date": "2021-05-01",
     "github_repo": "https://github.com/juanperez",
     "email": "juanperez@example.com",
-    "telephone": "+52 55 1234 5678"
+    "telephone": "+52 55 1234 5678",
+    "countryCode": "ES",
+    "region": "ES-AR"
   }
 ]

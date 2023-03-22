@@ -33,7 +33,7 @@ function ProjectPage() {
       <div className="project">
         <h2>{selectedProject.client_name}</h2>
         <h3>Client Location: {selectedProject.client_location}</h3>
-        <p>Client Website: {selectedProject.website_url}</p>
+        <p>Client Website: {selectedProject.website_name}</p>
         <p>Project start: {selectedProject.project_start_date}</p>
         <p>Current Project Length: {selectedProject.current_project_length}</p>
         <p>Estimated Cost: {selectedProject.estimated_costs}</p>

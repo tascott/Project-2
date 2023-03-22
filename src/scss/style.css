@@ -200,6 +200,7 @@ textarea {
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
+  max-width: 400px;
 }
 
 input[type=text]:hover,
@@ -321,6 +322,12 @@ a:active {
   text-decoration: none;
 }
 
+p.error {
+  background-color: red;
+  padding: 20px;
+  margin-top: 10px;
+}
+
 .projectList {
   display: flex;
   flex-wrap: wrap;
@@ -356,16 +363,16 @@ a:active {
   padding: 2.5rem;
 }
 .grid__main {
-  background-color: #0303a0;
+  background-color: hsl(240, 96%, 32%);
 }
 @media (min-width: 43.75em) {
   .grid__main {
-    background-color: #005200;
+    background-color: hsl(120, 100%, 16%);
   }
 }
 @media (min-width: 56.25em) {
   .grid__main {
-    background-color: #b37400;
+    background-color: hsl(39, 100%, 35%);
   }
 }
 @media (max-width: 56.24875em) {
@@ -477,6 +484,18 @@ a:active {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.pw-form {
+  text-align: center;
+  margin-top: 20px;
+}
+.pw-form input {
+  margin: 0 auto;
+}
+
+.comments-box {
+  border: 2px solid white;
 }
 
 /*# sourceMappingURL=style.css.map */
