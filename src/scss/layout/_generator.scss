@@ -14,8 +14,9 @@
         margin-top: 20px;
 
         .form-section {
-            max-width: 300px;
+            width: clamp(250px, 350px, 20vw);
             padding: 1rem;
+            margin-right: 2rem;
         }
 
         .form-section:not(:nth-child(2)) {
@@ -67,5 +68,12 @@
 
 .payDates {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    width: clamp(500px, 700px, 50vw);
+    flex-basis: 700px;
+}
+
+.invoiceSection,
+.paySection {
+    flex-basis: 0;
 }
