@@ -1,11 +1,12 @@
 import "../../scss/style.css";
+import FooterStructure from "./Footer";
 
 function Footer() {
   return (
     <div className="footer">
-      <h1>Footer</h1>
+      <FooterStructure />
     </div>
   );
-}
+};
 
 export default Footer;
