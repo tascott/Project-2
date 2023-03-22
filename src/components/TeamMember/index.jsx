@@ -3,6 +3,7 @@ import "../../scss/style.css";
 import { useSpring, animated } from "react-spring";
 import useMeasure from "react-use-measure";
 import axios from "axios";
+import Weather from "../../components/weatherAPI/Weather";
 
 function TeamMember(props) {
   const [showDetails, setShowDetails] = useState(false);
@@ -32,7 +33,7 @@ function TeamMember(props) {
       },
     };
 
-    console.log(options.url)
+    console.log(options.url);
 
     try {
       const response = await axios.request(options);
@@ -55,27 +56,27 @@ function TeamMember(props) {
       const isHoliday = holidays.some((holiday) => {
         const isDateMatch = holiday.date === currentDateString;
         const isCountryMatch = holiday.countryCode === props.countryCode;
-        const isRegionMatch = !holiday.region || holiday.region === props.region;
+        const isRegionMatch =
+          !holiday.region || holiday.region === props.region;
 
         return isDateMatch && isCountryMatch && isRegionMatch;
       });
 
       indicators.push(
         <div
-        key={i}
-        style={{
-          display: "inline-block",
-          backgroundColor: isHoliday ? "red" : "green",
-          color: "white",
-          width: "30px",
-          height: "30px",
-          lineHeight: "30px",
-          textAlign: "center",
-          borderRadius: "4px",
-          margin: "5px",
-        }}
-      >
-        </div>
+          key={i}
+          style={{
+            display: "inline-block",
+            backgroundColor: isHoliday ? "red" : "green",
+            color: "white",
+            width: "30px",
+            height: "30px",
+            lineHeight: "30px",
+            textAlign: "center",
+            borderRadius: "4px",
+            margin: "5px",
+          }}
+        ></div>
       );
     }
 
@@ -91,12 +92,28 @@ function TeamMember(props) {
         <div ref={ref}>
           <h3>{props.job_title}</h3>
           <p>Location: {props.location}</p>
-          <p>Email: {props.email}</p>
-          <p>Phone: {props.telephone}</p>
+          <p>
+            Email: <a href={`mailto:${props.email}`}>{props.email}</a>
+          </p>
+          <p>
+            Phone: <a href={`tel:${props.telephone}`}>{props.telephone}</a>
+          </p>
           <p>Hired on: {props.hire_date}</p>
-          <p>Repo: {props.github_repo}</p>
-          <button style={{ cursor: "pointer" }} onClick={getHolidays}>Check upcoming holidays</button>
+          <p>
+            Repo:{" "}
+            <a
+              href={props.github_repo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {props.github_repo}
+            </a>
+          </p>
+          <button style={{ cursor: "pointer" }} onClick={getHolidays}>
+            Check upcoming holidays
+          </button>
           <div>{renderHolidayIndicators()}</div>
+          <Weather location={props.location} />
         </div>
       </animated.div>
     </div>

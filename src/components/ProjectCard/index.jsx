@@ -1,5 +1,4 @@
 import "../../scss/style.css";
-import abc from '../../assets/images/abc.png';
 import { images } from "../../components/ImageImports";
 
 function ProjectCard(props) {

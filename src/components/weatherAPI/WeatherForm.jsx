@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import WeatherContext from './context';
 
-function WeatherForm() {
+function WeatherForm(props) {
   const { setWeatherData } = useContext(WeatherContext);
   const [location, setLocation] = useState('');
 
@@ -28,14 +28,18 @@ function WeatherForm() {
     }
   };
 
+  useEffect(() => {
+    setLocation(props.location);
+  }, [props.location]);
+
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      {/* <input
         type="text"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
         placeholder="Enter a location"
-      />
+      /> */}
       <button type="submit">Get Weather</button>
     </form>
   );

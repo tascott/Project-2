@@ -1,7 +1,7 @@
 [
   {
     "id": "id1",
-    "name": "John Doe",
+    "name": "John Harcourt",
     "job_title": "Front-end Developer",
     "location": "San Francisco, California",
     "hire_date": "2021-01-01",
@@ -51,12 +51,12 @@
     "id": "id5",
     "name": "Juan Perez",
     "job_title": "Web Developer",
-    "location": "Spain",
+    "location": "Andalusia, Spain",
     "hire_date": "2021-05-01",
     "github_repo": "https://github.com/juanperez",
     "email": "juanperez@example.com",
     "telephone": "+52 55 1234 5678",
     "countryCode": "ES",
-    "region": "ES-AR"
+    "region": "ES-AN"
   }
 ]

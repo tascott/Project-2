@@ -1,9 +1,11 @@
 import React, { forwardRef } from "react";
 import "../../scss/style.css";
+import { images } from "../../components/ImageImports";
 
 const InvoiceTemplate = forwardRef(({ data }, ref) => {
   const { invoiceDate, paymentDueDate, clientName, clientAddress, notes, seo, design, logoCreation, contentCreation  } =
     data;
+  const imgSrc = images[data.image];
 
   return (
     <div className="invoiceBG"
@@ -12,6 +14,7 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
       style={{ width: '500px', height: '600px' }}
     >
       <h6>Invoice</h6>
+      <img className="project--card_img" src={imgSrc} alt={data.website_name} style={{ maxWidth: "100px" }} />
       <p>
         <strong>Invoice date:</strong> {invoiceDate}
       </p>

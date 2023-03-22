@@ -5,10 +5,11 @@ function WeatherDisplay() {
   const { weatherData } = useContext(WeatherContext);
 
   if (!weatherData) {
-    return <div>No weather data yet.</div>;
+    // return <div>No weather data yet.</div>;
+  } else {
+    return <div>{weatherData}°C</div>;
   }
 
-  return <div>{weatherData}°C</div>;
 }
 
 export default WeatherDisplay;

@@ -12,9 +12,9 @@ function Team() {
         {team.map((member) => (
           <TeamMember key={member.id} {...member} />
         ))}
-        <WeatherProvider>
+        {/* <WeatherProvider>
           <WeatherDisplay />
-        </WeatherProvider>
+        </WeatherProvider> */}
       </div>
     </div>
   );

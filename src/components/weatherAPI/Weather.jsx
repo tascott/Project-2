@@ -4,11 +4,11 @@ import WeatherForm from './WeatherForm';
 import WeatherDisplay from './WeatherDisplay';
 import Header from './Header';
 
-function Weather() {
+function Weather(props) {
   return (
     <WeatherProvider>
-      <Header />
-      <WeatherForm />
+      {/* <Header /> */}
+      <WeatherForm location={props.location} />
       <WeatherDisplay />
     </WeatherProvider>
   );
