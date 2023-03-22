@@ -112,7 +112,9 @@ function TeamMember(props) {
           <button style={{ cursor: "pointer" }} onClick={getHolidays}>
             Check upcoming holidays
           </button>
-          <div>{renderHolidayIndicators()}</div>
+          {showHolidays &&
+            <div className="show-holidays"><p>Next 5 days</p> {renderHolidayIndicators()}</div>
+          }
           <Weather location={props.location} />
         </div>
       </animated.div>

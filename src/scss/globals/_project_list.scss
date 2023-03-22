@@ -4,7 +4,8 @@
   justify-content: space-around;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .projectCardContainer {
@@ -12,8 +13,7 @@
   margin: 10px;
   width: 100%;
   text-align: left;
-  padding: 20px;
-
+  padding-bottom: 15px;
 }
 
 .project--card_img {

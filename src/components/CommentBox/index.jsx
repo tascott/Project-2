@@ -55,7 +55,7 @@ function CommentBox() {
       <title>Comments Box</title>
       <div>
         <div>
-          <h3>Comments</h3>
+          <h3>Developer Updates</h3>
           <form onSubmit={onSubmit}>
             <input
               onChange={onChange}
@@ -85,9 +85,9 @@ function CommentBox() {
               {commentList.map((comment) => {
                 if (comment.project_name === urlFriendlyName) {
                   return (
-                    <div key={comment.id} className="border rounded-md p-4">
-                      <p className="font-semibold mb-2">User: {comment.username}</p>
-                      <p className="font-light">Comment: {comment.payload}</p>
+                    <div key={comment.id} className="single-comment">
+                      <p className="user">User: {comment.username}</p>
+                      <p className="comment">Comment: {comment.payload}</p>
                     </div>
                   );
                 }

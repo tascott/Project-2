@@ -4,7 +4,6 @@ import projects from "../../data/projects.json";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import InvoiceGenerator from "../InvoiceGenerator";
 import ProjectToDos from "../ProjectToDos";
 
 function ProjectList() {

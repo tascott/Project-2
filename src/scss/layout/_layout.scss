@@ -18,6 +18,13 @@
   padding: 0 40px;
 }
 
+//smaller screens
+@media screen and (max-width: 600px) {
+  .layout--container {
+    padding: 0 20px;
+  }
+}
+
 .layout--container__footer {
   margin-top: auto;
   padding: 1rem;
@@ -31,4 +38,67 @@
 
 .wrapper--main-footer main {
   min-height: 60vh;
+}
+
+.home-header {
+  padding: 30px;
+}
+
+.feature {
+  padding: 30px;
+  display: flex;
+}
+
+.feature-img {
+  height: 200px;
+  width: 500px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feature-img.team {
+  background-image: url(../assets/images/team.png);
+}
+
+.feature-img.projects {
+  background-image: url(../assets/images/project.png);
+}
+
+.feature-img.generate {
+  background-image: url(../assets/images/invoice.png);
+}
+
+.feature h2 {
+  width: fit-content;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  padding: 5px 0;
+}
+
+.feature:nth-of-type(2) {
+  text-align: right;
+  h2 {
+    margin-left: auto;
+  }
+}
+
+//small screens
+@media screen and (max-width: 600px) {
+  .feature {
+    padding: 10px;
+    span {
+      display: none;
+    }
+  }
+  .home-header {
+    padding: 10px;
+    h1 {
+      margin-bottom: 5px;
+    }
+    h2 {
+      margin-bottom: 5px;
+      font-size: 1em;
+    }
+  }
 }
