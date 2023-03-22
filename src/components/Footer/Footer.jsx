@@ -1,5 +1,6 @@
 import React from 'react';
 import "../../scss/style.css";
+import { Link } from "react-router-dom";
 
 import Linkedin from "../../assets/images/linkedin.png";
 import github from "../../assets/images/github-mark.png";
@@ -19,7 +20,7 @@ function FooterStructure() {
         <img src={instagram} alt="instagram" />
       </a>
       <div>
-        <Link to="/"><img src={logo} className="FooterLogo" alt="Logo" /></Link>
+        <Link to="/"><img src="" className="FooterLogo" alt="Logo" /></Link>
       </div>
       <div sm={4} className="FooterLinks copytxt">
         <p>Copyright &copy 2023: GARAGE web</p>
