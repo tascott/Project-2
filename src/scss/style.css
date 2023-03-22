@@ -27,11 +27,12 @@ body {
 :root {
   padding: 0;
   font-family: "Roboto Slab", sans-serif;
-  background-color: var(--background-color);
   color: var(--text-color);
   background: url(../../../Design/robert-zunikoff-xZzRMSAe3I4-unsplash.webp);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  background-attachment: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -50,15 +51,6 @@ button {
   border-radius: 10px;
   background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
   box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-}
-
-.layout--container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 0 40px;
 }
 
 #invoice {
@@ -200,6 +192,7 @@ textarea {
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
+  max-width: 400px;
 }
 
 input[type=text]:hover,
@@ -321,6 +314,12 @@ a:active {
   text-decoration: none;
 }
 
+p.error {
+  background-color: red;
+  padding: 20px;
+  margin-top: 10px;
+}
+
 .projectList {
   display: flex;
   flex-wrap: wrap;
@@ -396,14 +395,29 @@ a:active {
   color: var(--text-color);
 }
 
-.header {
-  position: sticky;
+.layout--container__navbar {
+  position: fixed;
   top: 1vh;
+}
+
+.layout--container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .layout--container__footer {
   margin-top: auto;
   padding: 1rem;
+}
+
+.wrapper--main-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20vh;
 }
 
 .generatorContainer {
@@ -477,6 +491,18 @@ a:active {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+}
+
+.pw-form {
+  text-align: center;
+  margin-top: 20px;
+}
+.pw-form input {
+  margin: 0 auto;
+}
+
+.comments-box {
+  border: 2px solid white;
 }
 
 /*# sourceMappingURL=style.css.map */
