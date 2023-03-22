@@ -43,9 +43,9 @@ button {
   background-color: black;
   color: white;
   border: 0;
-  margin-right: 2rem;
+  margin-right: 1vw;
   line-height: 2.5;
-  padding: 0 20px;
+  padding: 0 1vw;
   font-size: 1rem;
   text-align: center;
   border-radius: 10px;
@@ -384,8 +384,7 @@ p.error {
 .navbar {
   display: flex;
   gap: 1rem;
-  position: sticky;
-  top: 5vh;
+  max-width: 100vw;
 }
 
 .navbar a {
@@ -393,6 +392,10 @@ p.error {
   padding: 0;
   border: none;
   color: var(--text-color);
+}
+
+.header {
+  display: inline-flex;
 }
 
 .layout--container__navbar {
@@ -418,6 +421,10 @@ p.error {
   display: flex;
   flex-direction: column;
   margin-top: 20vh;
+}
+
+.wrapper--main-footer main {
+  min-height: 60vh;
 }
 
 .generatorContainer {

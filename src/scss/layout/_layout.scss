@@ -1,7 +1,6 @@
-// .header {
-//   position: sticky;
-//   top: 1vh;
-// }
+.header {
+  display: inline-flex;
+}
 
 .layout--container__navbar {
   position: fixed;
@@ -26,4 +25,8 @@
   display: flex;
   flex-direction: column;
   margin-top: 20vh;
+}
+
+.wrapper--main-footer main {
+  min-height: 60vh;
 }
