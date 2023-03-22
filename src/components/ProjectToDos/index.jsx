@@ -116,7 +116,7 @@ const ProjectToDos = (props) => {
                     <input
                       className="to-do-check"
                       data-todotoupdate={parsedTodo.title}
-                      checked={parsedTodo.completed}
+                      checked={Boolean(parsedTodo.completed)}
                       onChange={handleCheckboxChange}
                       type="checkbox"
                     />
