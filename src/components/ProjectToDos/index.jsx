@@ -2,7 +2,8 @@ import "../../scss/style.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_KEY = import.meta.env.VITE_JSBIN_KEY ?? "";
+// const API_KEY = import.meta.env.VITE_JSBIN_KEY ?? "";
+const API_KEY = "$2b$10$rN8xKdFu0OpSxRIcEhTv8OE2Gsr.V1F3riFhtRiq4z2qOLRjMpAMq"
 
 const readBinData = async (binId) => {
   try {
