@@ -21,11 +21,6 @@ function Navbar(props) {
           Projects
         </Link>
       </button>
-      {/* <button>
-        <Link to="/weather">
-          W
-        </Link>
-      </button> */}
       <button>
         <Link to="/generate">
           Generate
