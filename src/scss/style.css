@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 :root {
   --background-color: #1c1c1c;
   --text-color: #FFF0DE;
@@ -28,7 +28,7 @@ body {
   padding: 0;
   font-family: "Roboto Slab", sans-serif;
   color: var(--text-color);
-  background: url(/bg.webp);
+  background: url(../../../src/assets/images/BGImage.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -401,6 +401,7 @@ p.error {
 .layout--container__navbar {
   position: fixed;
   top: 1vh;
+  z-index: 10;
 }
 
 .layout--container {
@@ -468,7 +469,7 @@ p.error {
   max-width: 300px;
   padding: 1rem;
 }
-.generatorContainer form .form-section:not(:nth-child(3)) {
+.generatorContainer form .form-section:not(:nth-child(2)) {
   flex: 1;
 }
 .generatorContainer form .checks {
@@ -506,6 +507,11 @@ p.error {
 }
 .pw-form input {
   margin: 0 auto;
+}
+
+.payDates {
+  display: flex;
+  justify-content: space-around;
 }
 
 .comments-box {

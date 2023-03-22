@@ -5,6 +5,7 @@
 .layout--container__navbar {
   position: fixed;
   top: 1vh;
+  z-index: 10;
 }
 
 .layout--container {
