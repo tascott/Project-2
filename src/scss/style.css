@@ -169,7 +169,6 @@ select option:focus {
 }
 
 label {
-  display: block;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -182,7 +181,7 @@ input[type=date],
 textarea {
   appearance: none;
   display: block;
-  width: 25vw;
+  width: clamp(250px, 350px, 20vw);
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -192,7 +191,6 @@ textarea {
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
-  max-width: 400px;
 }
 
 input[type=text]:hover,
@@ -355,16 +353,16 @@ p.error {
   padding: 2.5rem;
 }
 .grid__main {
-  background-color: hsl(240, 96%, 32%);
+  background-color: #0303a0;
 }
 @media (min-width: 43.75em) {
   .grid__main {
-    background-color: hsl(120, 100%, 16%);
+    background-color: #005200;
   }
 }
 @media (min-width: 56.25em) {
   .grid__main {
-    background-color: hsl(39, 100%, 35%);
+    background-color: #b37400;
   }
 }
 @media (max-width: 56.24875em) {
@@ -466,8 +464,9 @@ p.error {
   margin-top: 20px;
 }
 .generatorContainer form .form-section {
-  max-width: 300px;
+  width: clamp(250px, 350px, 20vw);
   padding: 1rem;
+  margin-right: 2rem;
 }
 .generatorContainer form .form-section:not(:nth-child(2)) {
   flex: 1;
@@ -511,7 +510,14 @@ p.error {
 
 .payDates {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  width: clamp(500px, 700px, 50vw);
+  flex-basis: 700px;
+}
+
+.invoiceSection,
+.paySection {
+  flex-basis: 0;
 }
 
 .comments-box {

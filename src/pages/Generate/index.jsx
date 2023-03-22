@@ -57,7 +57,7 @@ function ProjectPage() {
       {!preview && currentProject !== "" && (
         <form>
           <div className="payDates">
-            <div className="form-section">
+            <div className="form-section invoiceSection">
               <label htmlFor="invoiceDate">Invoice Date:</label>
               <input
                 id="invoiceDate"
@@ -67,7 +67,7 @@ function ProjectPage() {
                 onChange={handleUpdate}
               />
             </div>
-            <div className="form-section">
+            <div className="form-section paySection">
               <label htmlFor="paymentDueDate">Payment due by:</label>
               <input
                 id="paymentDueDate"
