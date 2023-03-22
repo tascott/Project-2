@@ -15,6 +15,8 @@ const readBinData = async (binId) => {
       }
     );
 
+    console.log(API_KEY)
+
     const data = response.data.record;
 
     return data;
