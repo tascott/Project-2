@@ -15,11 +15,14 @@ const readBinData = async (binId) => {
       }
     );
 
+    console.log(API_KEY)
+
     const data = response.data.record;
 
     return data;
   } catch (error) {
     console.error('Failed to read bin data:', error);
+    return null;
   }
 };
 
@@ -35,6 +38,7 @@ const updateBinData = async (binId, updatedData) => {
     console.log('Bin data updated successfully');
   } catch (error) {
     console.error('Failed to update bin data:', error);
+    return null
   }
 };
 
@@ -54,6 +58,9 @@ const ProjectToDos = (props) => {
     setLoading(true);
     const binData = await readBinData(binId);
     setData(binData);
+    if (binData !== null) {
+      setData(binData);
+    }
     setLoading(false);
   };
 
@@ -83,11 +90,13 @@ const ProjectToDos = (props) => {
       return;
     }
 
-    newTodo = JSON.stringify({ title: newTodo, completed: "false" });
+    newTodo = JSON.stringify({ title: newTodo, completed: false });
 
     const updatedData = { ...data, todos: [...data.todos, newTodo] };
     await updateBinData(binId, updatedData);
-    setData(updatedData);
+    if (updateResult !== null) {
+      setData(updatedData);
+    }
   };
 
   const handleSubmit = (e) => {
@@ -106,35 +115,38 @@ const ProjectToDos = (props) => {
         <div className="loading-spinner"></div>
       ) : (
         <div>
-          {data.todos && data.todos.length > 0 ? (
+          {data && data.todos && data.todos.length > 0 ? (
             <ul>
               {data.todos.map((todo, index) => {
                 const parsedTodo = JSON.parse(todo);
+                console.log(parsedTodo)
                 return (
-                  <li key={index}>
-                    {parsedTodo.title}
-                    <input
-                      className="to-do-check"
-                      data-todotoupdate={parsedTodo.title}
-                      checked={Boolean(parsedTodo.completed)}
-                      onChange={handleCheckboxChange}
-                      type="checkbox"
-                    />
-                  </li>
+                  <>{parsedTodo.title &&
+                    <li key={index}>
+                      {parsedTodo.title}
+                      <input
+                        className="to-do-check"
+                        data-todotoupdate={parsedTodo.title}
+                        checked={parsedTodo.completed}
+                        onChange={handleCheckboxChange}
+                        type="checkbox"
+                      />
+                    </li>
+                  }</>
                 );
               })}
             </ul>
           ) : (
-            <div>No data</div>
+            <div className="no-to-data">No to-dos yet!</div>
           )}
         </div>
       )}
 
       <form onSubmit={handleSubmit}>
         <label>
-          Add to-do:
           <input
             type="text"
+            placeholder="Add a new to-do"
             value={newTodo}
             onChange={(e) => setNewTodo(e.target.value)}
             className="new-todo-input"
