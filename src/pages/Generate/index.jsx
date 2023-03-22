@@ -56,28 +56,30 @@ function ProjectPage() {
       </div>
       {!preview && currentProject !== "" && (
         <form>
-          <div className="form-section">
-            <label htmlFor="invoiceDate">Invoice Date:</label>
-            <input
-              id="invoiceDate"
-              name="invoiceDate"
-              type="date"
-              value={data.invoiceDate || ""}
-              onChange={handleUpdate}
-            />
-          </div>
-          <div className="form-section">
-            <label htmlFor="paymentDueDate">Payment due by:</label>
-            <input
-              id="paymentDueDate"
-              name="paymentDueDate"
-              type="date"
-              value={data.paymentDueDate || ""}
-              onChange={handleUpdate}
-            />
+          <div className="payDates">
+            <div className="form-section">
+              <label htmlFor="invoiceDate">Invoice Date:</label>
+              <input
+                id="invoiceDate"
+                name="invoiceDate"
+                type="date"
+                value={data.invoiceDate || ""}
+                onChange={handleUpdate}
+              />
+            </div>
+            <div className="form-section">
+              <label htmlFor="paymentDueDate">Payment due by:</label>
+              <input
+                id="paymentDueDate"
+                name="paymentDueDate"
+                type="date"
+                value={data.paymentDueDate || ""}
+                onChange={handleUpdate}
+              />
+            </div>
           </div>
           <div className="form-section checks">
-          <label className="custom-checkbox">
+            <label className="custom-checkbox">
               <input
                 type="checkbox"
                 name="logoCreation"

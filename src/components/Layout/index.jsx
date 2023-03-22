@@ -11,9 +11,11 @@ const Layout = ({ children }) => {
         <Header />
         <Navbar />
       </div>
-      <main>{children}</main>
-      <div className="layout--container__footer">
-        <Footer />
+      <div className="wrapper--main-footer">
+        <main>{children}</main>
+        <div className="layout--container__footer">
+          <Footer />
+        </div>
       </div>
     </div>
   );

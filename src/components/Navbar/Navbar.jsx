@@ -23,7 +23,7 @@ function Navbar(props) {
       </button>
       <button>
         <Link to="/weather">
-          Temp Selector
+          W
         </Link>
       </button>
       <button>
