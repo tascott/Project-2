@@ -381,8 +381,9 @@ p.error {
 
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  max-width: 100vw;
+  max-width: 80vw;
 }
 
 .navbar a {
@@ -406,7 +407,7 @@ p.error {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
-  min-height: 100vh;
+  min-height: 80vh;
   margin: 0 auto;
   padding: 0 40px;
 }
