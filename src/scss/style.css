@@ -680,6 +680,9 @@ p.error {
 .pw-form {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .pw-form input {
   margin: 0 auto;
