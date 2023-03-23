@@ -1,3 +1,5 @@
+// designed for initial axios testing, used to create visible form to send and receive. kept as artifact
+
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import WeatherContext from './context';
@@ -40,7 +42,7 @@ function WeatherForm(props) {
         onChange={(e) => setLocation(e.target.value)}
         placeholder="Enter a location"
       /> */}
-      <button type="submit" style={{cursor: "pointer"}} >Get Weather</button>
+      <button type="submit" style={{ cursor: "pointer" }} >Get Weather</button>
     </form>
   );
 }

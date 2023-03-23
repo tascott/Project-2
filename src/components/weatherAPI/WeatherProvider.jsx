@@ -1,3 +1,4 @@
+// component to receive weather as state handling updates
 import React, { useState } from 'react';
 import WeatherContext from './context';
 

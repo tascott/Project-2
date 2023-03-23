@@ -1,9 +1,11 @@
+// making Axios call
 import React, { createContext, useState } from 'react';
 import axios from 'axios';
 import WeatherContext from './context';
 
 const WeatherContext = createContext();
 
+// construct object to pass in request to weather API
 const WeatherProvider = ({ children }) => {
   const options = {
     method: 'GET',
@@ -24,6 +26,7 @@ const WeatherProvider = ({ children }) => {
 
     options.params.q = geoLocation;
     try {
+      // using request instead of get to make call because of sending an object. GET method in object
       const response = await axios.request(options);
       setTemperature(response.data.current.temp_f);
       console.log(temperature);
