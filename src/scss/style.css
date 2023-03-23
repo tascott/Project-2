@@ -471,7 +471,8 @@ p.error {
 }
 
 .WGLogo {
-  height: clamp(60px, 15vh, 5vw);
+  height: clamp(60px, 15vh, 6vw);
+  margin-right: 2vw;
 }
 
 .layout--container__navbar {
