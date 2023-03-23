@@ -10,6 +10,8 @@ function Home() {
         </h2>
       </header>
 
+      {/* Copy generated with chatGPT! */}
+
       <section className="feature">
         <div className="feature-img team"></div>
         <div className="feature-text">

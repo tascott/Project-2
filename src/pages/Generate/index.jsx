@@ -23,6 +23,7 @@ function ProjectPage() {
   const handleUpdate = (e) => {
     e.preventDefault();
     const { name, value } = e.target;
+    // nice way of updating the state object without having to do a bunch of if statements
     setData({
       ...data,
       [name]: value,
@@ -31,6 +32,7 @@ function ProjectPage() {
 
   return (
     <div className="generatorContainer">
+      {/* Lots of checks below to make sure we have a current project otherwise the form will look weird */}
       <div className="invoice-generator generator-card">
         <select value={currentProject} onChange={updateCurrentProject}>
           <option key="0" value="">
@@ -54,6 +56,7 @@ function ProjectPage() {
           </>
         )}
       </div>
+      {/* Show this div only if preview is false and currentProject is not empty as it's the only time we want to show the form (and the form is the only thing that should be in this div) */}
       {!preview && currentProject !== "" && (
         <form>
           <div className="payDates">
@@ -90,7 +93,7 @@ function ProjectPage() {
               />
               Logo Creation
             </label>
-
+            {/* Todo: Loop through the data object and create a checkbox for each key instead of hardcoding them */}
             <label className="custom-checkbox">
               <input
                 type="checkbox"

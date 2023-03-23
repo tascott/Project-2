@@ -3,9 +3,11 @@ import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+// Get there from env variables
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL ?? "";
 const supabaseKey = import.meta.env.VITE_SUPABASE_KEY ?? "";
 
+// Create a single supabase client for interacting with your database
 export const supabase = createClient(supabaseKey, supabaseUrl);
 
 function CommentBox() {
@@ -24,6 +26,7 @@ function CommentBox() {
   };
 
   const getCommentList = async () => {
+    // Get all comments from the comments table
     const { data, error } = await supabase.from("comments").select("*");
     if (!error && data) {
       setCommentList(data);
@@ -33,12 +36,14 @@ function CommentBox() {
   };
 
   useEffect(() => {
+    // Get all comments from the comments table on first render
     getCommentList();
   }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
 
+    // Insert a new comment into the comments table
     const { data, error } = await supabase.from("comments").insert({
       username: userName,
       payload: comment,

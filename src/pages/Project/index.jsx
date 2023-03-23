@@ -51,8 +51,9 @@ function ProjectPage() {
         <YourApp />
       ) : (
         <form className="pw-form" onSubmit={checkPw}>
-          <h3>Please enter the password</h3>
-          <input id="password" name="password" type="password"/>
+            <h3>Please enter the password</h3>
+            <input id="username" hidden type="text" autoComplete="username" style={{display: "none"}}/>
+          <input id="password" name="password" type="password" autoComplete="new-password"/>
           <br />
             <button type="submit">Enter</button>
             {showError && (

@@ -3,6 +3,7 @@ import "../../scss/style.css";
 import { images } from "../../components/ImageImports";
 
 const InvoiceTemplate = forwardRef(({ data }, ref) => {
+  // Destructure data from props
   const { invoiceDate, paymentDueDate, clientName, clientAddress, notes, seo, design, logoCreation, contentCreation  } =
     data;
   const imgSrc = images[data.image];
@@ -36,6 +37,7 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
         </div>
       </div>
 
+      {/* Couldn't get this to work without hardcoding a width */}
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
           <tr>
@@ -62,6 +64,7 @@ const InvoiceTemplate = forwardRef(({ data }, ref) => {
           </tr>
         </thead>
         <tbody>
+          {/* Todo: Add a loop here to iterate over the services and add a row for each one */}
         {seo &&
               <tr>
                 <td style={{ padding: "8px 0", textAlign:"center" }}>SEO</td>

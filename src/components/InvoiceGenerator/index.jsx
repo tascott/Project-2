@@ -7,6 +7,7 @@ import "../../scss/style.css";
 const InvoiceGenerator = ({ data }) => {
   const invoiceRef = useRef();
 
+  // Generate PDF using the html2canvas and jsPDF libraries, this grabs all the html from the invoiceRef and converts it to a pdf
   const generatePDF = async () => {
     const canvas = await html2canvas(invoiceRef.current, { scale: 1 });
     const imgData = canvas.toDataURL('image/png');

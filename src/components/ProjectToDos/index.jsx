@@ -2,6 +2,7 @@ import "../../scss/style.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+// Hard to hardcode the API key in the code, as the dollar signs were breaking netlify, and and I couldn't find a way to escape them without breaking the code.
 // const API_KEY = import.meta.env.VITE_JSBIN_KEY ?? "";
 const API_KEY = "$2b$10$rN8xKdFu0OpSxRIcEhTv8OE2Gsr.V1F3riFhtRiq4z2qOLRjMpAMq"
 
@@ -16,8 +17,6 @@ const readBinData = async (binId) => {
       }
     );
 
-    console.log(API_KEY)
-
     const data = response.data.record;
 
     return data;
@@ -28,6 +27,7 @@ const readBinData = async (binId) => {
 };
 
 const updateBinData = async (binId, updatedData) => {
+  // Update the bin data using 'put' (like update), hardcoded binid in json data in props
   try {
     await axios.put(`https://api.jsonbin.io/v3/b/${binId}`, updatedData, {
       headers: {
@@ -45,6 +45,7 @@ const updateBinData = async (binId, updatedData) => {
 
 const ProjectToDos = (props) => {
   const [data, setData] = useState({ todos: [] });
+  // shows the loading spinner as the calls are kind of slow
   const [loading, setLoading] = useState(false);
   let [newTodo, setNewTodo] = useState("");
 
@@ -60,6 +61,7 @@ const ProjectToDos = (props) => {
     const binData = await readBinData(binId);
     setData(binData);
     if (binData !== null) {
+      // If the bin data is not null, set the data to the bin data - this was causing an error before, as the bin data was null, and the data was being set to null, which was causing the map function to break
       setData(binData);
     }
     setLoading(false);
@@ -72,6 +74,7 @@ const ProjectToDos = (props) => {
 
     //loop over each todo, parse it, and if the title matches todotoupdate, update the completed value then stringify it and push it to the new array
     const updatedTodos = data.todos.map((todo) => {
+      // Remember to parse the todo before you can access the title, comes through as json string
       const parsedTodo = JSON.parse(todo);
       if (parsedTodo.title === todotoupdate) {
         parsedTodo.completed = checked;
@@ -95,13 +98,12 @@ const ProjectToDos = (props) => {
 
     const updatedData = { ...data, todos: [...data.todos, newTodo] };
     await updateBinData(binId, updatedData);
-    if (updateResult !== null) {
-      setData(updatedData);
-    }
+    setData(updatedData);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Update the bin data then reset the new todo input
     handleUpdate();
     setNewTodo("");
   };
