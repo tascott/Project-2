@@ -11,7 +11,7 @@ The apps supports Freelancer(s) in their everyday work with clients on projects 
 
 ## Screenshot
 
-![screenshot of GARAGE web App](.//src/TBC "Screenshot of the Home Page")
+![screenshot of GARAGE web App](https://user-images.githubusercontent.com/18272434/227174159-eb8e1a48-42d1-4e8a-9b42-49197caa00ba.png)
 
 ## Installation
 
@@ -49,3 +49,5 @@ jsPDF: https://codesandbox.io/s/8z07zjomjj
 React Router 6: https://www.robinwieruch.de/react-router-nested-routes/
 
 Supabase: https://dev.to/hoonweedev/build-comments-section-with-nextjs-and-supabase-1o6c
+
+JsonBIN: https://jsonbin.io/app/dashboard
