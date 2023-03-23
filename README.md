@@ -17,6 +17,8 @@ The apps supports Freelancer(s) in their everyday work with clients on projects 
 
 * npm install
 
+using Sass: run `sass src\sass\style.scss src\sass\style.css` in command line to run live compiler
+
 ## Link to Repo on Github
 
 https://github.com/tascott/project-2
@@ -40,15 +42,10 @@ Ralph Cox, Thomas Scott, Anna Bessant
 For further details and follow-up contact: ralph@strategy66.com; tom.a.scott@hotmail.co.uk  
 
 
+## Code Sources
 
-
-
-
-// Ralph's notes:
-jsPDF helper/source: https://codesandbox.io/s/8z07zjomjj
+jsPDF: https://codesandbox.io/s/8z07zjomjj
 
 React Router 6: https://www.robinwieruch.de/react-router-nested-routes/
 
-supabase help: https://dev.to/hoonweedev/build-comments-section-with-nextjs-and-supabase-1o6c
-
-### using Sass: run `sass src\sass\style.scss src\sass\style.css` in command line to run live compiler
+Supabase: https://dev.to/hoonweedev/build-comments-section-with-nextjs-and-supabase-1o6c
