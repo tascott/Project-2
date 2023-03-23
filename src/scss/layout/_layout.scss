@@ -5,6 +5,7 @@
 
 .layout--container__navbar {
   display: flex;
+  // place logo on right
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,10 +15,12 @@
   width: 80vw;
 }
 
+// Background to protect Header on scroll
 .wrapper--layoutContainer {
   margin: 0;
   position: fixed;
   width: 100%;
+  // fixing fixed width gradient with direction bottom to top
   background: linear-gradient(0deg, transparent, black 10%);
   z-index: 3;
   height: 15vh;

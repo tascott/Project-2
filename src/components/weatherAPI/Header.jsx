@@ -1,3 +1,4 @@
+// redundant - kept as artifact
 import styles from './Header.module.css';
 
 const Header = () => (

@@ -1,3 +1,4 @@
+/* styling for form before moving to SASS, kept as artifact */
 .input {
     border-radius: var(--main-border-radius);
     margin-bottom: 1rem;
